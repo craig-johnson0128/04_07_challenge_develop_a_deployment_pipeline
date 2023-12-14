@@ -53,14 +53,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "After staging envirionment is deployed..." >> $GITHUB_STEP_SUMMARY
-          echo "and after the staging tests have passed..." >> $GITHUB_STEP_SUMMARY
-          echo "require a review before deploying to the production envirionment, then..." >> $GITHUB_STEP_SUMMARY
-          echo "- Deploy the artifact to the production environment" >> $GITHUB_STEP_SUMMARY
+          echo "After staging envirionment is deployed..."
+          echo "and after the staging tests have passed..."
+          echo "require a review before deploying to the production envirionment, then..."
+          echo "- Deploy the artifact to the production environment"
 
   test-production:
     needs: production
     runs-on: ubuntu-latest
     steps:
-      - run: echo "- Test the artifact in the production environment" >> $GITHUB_STEP_SUMMARY
+      - run: echo "- Test the artifact in the production environment"
       - run: echo "# All tests and deployments have completed successfully!" >> $GITHUB_STEP_SUMMARY
